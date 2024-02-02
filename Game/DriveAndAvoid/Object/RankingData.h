@@ -9,7 +9,7 @@ private:
 
 public:
 	RankingData();
-	`RankingData();
+	~RankingData();
 
 	void Initialize();  //‰Šúˆ—
 	void Finalize();    //I—¹ˆ—

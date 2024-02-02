@@ -9,7 +9,7 @@ barrier(nullptr)
 
 }
 
-Player::～Player()
+Player::~Player()
 {
 
 }
@@ -156,13 +156,13 @@ float Player::GetHp() const
 }
 
 //バリア枚数取得処理
-int Player::GetBarrierCount() const
+int Player::GetBarriarCount() const
 {
 	return this->barrier_count;
 }
 
 //バリア有効か?を取得
-bool Palyer::IsBarrier() coust
+bool Player::IsBarrier() const
 {
 	return (barrier != nullptr);
 }

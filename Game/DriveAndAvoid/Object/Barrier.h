@@ -2,7 +2,7 @@
 
 #include "../Utility/Vector2D.h"
 
-calss Barrier
+class Barrier
 {
 private:
 	int image;   //ƒoƒŠƒA‰æ‘œ
@@ -10,7 +10,7 @@ private:
 
 public:
 	Barrier();
-	`Barrier();
+	~Barrier();
 
 	void Draw(const Vector2D& location);  //•`‰æˆ—
 	bool IsFinished(float speed);  //õ–½‚ªs‚«‚½‚©?

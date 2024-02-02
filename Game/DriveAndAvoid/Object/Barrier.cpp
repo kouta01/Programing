@@ -1,7 +1,7 @@
 #include "Barrier.h"
-#include "DaLib.h"
+#include "DxLib.h"
 
-Barrier::Barrrier() : image(NULL), life_span(1000)
+Barrier::Barrier():image(NULL),life_span(1000)
 {
 	//‰æ‘œ‚Ì“Ç‚İ‚İ
 	image = LoadGraph("Resource/images/barrier.png");
@@ -13,16 +13,16 @@ Barrier::Barrrier() : image(NULL), life_span(1000)
 	}
 }
 
-Barrier::`Barrier()
+Barrier::~Barrier()
 {
 	//“Ç‚İ‚ñ‚¾‰æ‘œ‚ğíœ
 	DeleteGraph(image);
 }
 
 //•`‰æˆ—
-void Barrier::Draw(const vector2D& location)
+void Barrier::Draw(const Vector2D& location)
 {
-	DrawRotaGrahF(location.X, location.y, 1.0, 0.0, image, TRUE);
+	DrawRotaGraphF(location.x, location.y, 1.0, 0.0, image, TRUE);
 }
 
 //õ–½‚ªs‚«‚½‚©?

@@ -7,7 +7,7 @@ location(0.0f), box_size(0.0f)
 
 }
 
-Enemy::～Enemy()
+Enemy::~Enemy()
 {
 
 }
@@ -16,7 +16,7 @@ Enemy::～Enemy()
 void Enemy::Initialize()
 {
 	//出現させるx座標パターンを取得
-	float random_x = (float)(GetRand(4) * 105 + 40) :
+	float random_x = (float)(GetRand(4) * 105 + 40);
 	//生成位置の設定
 	location = Vector2D(random_x, -50.0f);
 	//当たり判定の設定
@@ -34,7 +34,7 @@ void Enemy::Update(float speed)
 void Enemy::Draw() const
 {
 	//敵画像の描画
-	DrawRotaGraphf(location.x, location.y, 1.0, 0.0, image, TRUE);
+	DrawRotaGraphF(location.x, location.y, 1.0, 0.0, image, TRUE);
 }
 
 void Enemy::Finalize()

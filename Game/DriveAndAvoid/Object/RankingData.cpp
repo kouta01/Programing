@@ -15,13 +15,13 @@ RankingData::RankingData()
 	}
 }
 
-RankingData::～RankingData()
+RankingData::~RankingData()
 {
 
 }
 
 //初期化処理
-void RankkingData::Initialize()
+void RankingData::Initialize()
 {
 	//ラインキングデータの読み込み
 	FILE* fp = nullptr;
@@ -93,7 +93,7 @@ void RankingData::SortData()
 		{
 			if (score[i] <= score[j])
 			{
-				int tmp = score[i]:
+				int tmp = score[i];
 				score[i] = score[j];
 				score[j] = tmp;
 
@@ -106,7 +106,7 @@ void RankingData::SortData()
 	}
 
 	//順位を整列させる
-	for (int i = 0, i < 5; i++)
+	for(int i = 0; i < 5; i++)
 	{
 		rank[i] = 1;
 	}
@@ -125,7 +125,7 @@ void RankingData::SortData()
 	FILE* fp = nullptr;
 
 	//ファイルオープン
-	errno_tresult = fopen_s(&fp, "Resource/dat/ranking_data.csv", "w");
+	errno_t result = fopen_s(&fp, "Resource/dat/ranking_data.csv", "w");
 
 	//エラーチェック
 	if (result != 0)
@@ -134,7 +134,7 @@ void RankingData::SortData()
 	}
 
 	//対象ファイルに書き込み
-	for (inti = 0; i < 5; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		fprintf(fp, "%d,%d,%s,＼n", score[i], rank[i], name[i]);
 	}
