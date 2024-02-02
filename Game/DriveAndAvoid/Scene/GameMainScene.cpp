@@ -29,22 +29,21 @@ void GameMainScene::Initialize()
 	//画像の読み込み
 	back_ground = LoadGraph("Resource/images/back.bmp");
 	barrier_image = LoadGraph("Resource/images/barrier.png");
-	int result = LoadDivGraph("Resource/images/car.bmp", 3, 3, 1, 63, 120,
-		enemy_image);
+	int result = LoadDivGraph("Resource/images/car.bmp", 3, 3, 1, 63, 120, enemy_image);
 
 	//エラーチェック
 	if (back_ground == -1)
 	{
-		throw("Resource/images/back.bmpがありません＼n");
+		throw("Resource/images/back.bmpがありません\n");
 	}
 
 	if (result == -1)
 	{
-		throw("Resource/images/car.bmpがありません＼n");
+		throw("Resource/images/car.bmpがありません\n");
 	}
 	if (barrier_image == -1)
 	{
-		throw("Resouce/images/barrier.pngがありません＼n");
+		throw("Resouce/images/barrier.pngがありません\n");
 	}
 
 	//オブジェクトの生成
@@ -166,6 +165,7 @@ void GameMainScene::Draw() const
 		float fx = 510.0f;
 		float fy = 390.0f;
 		DrawFormatStringF(fx, fy, GetColor(0, 0, 0), "FUEL METER");
+		DrawBoxAA(fx, fy + 20.0f, fx + (player->GetFuel() * 100 / 20000), fy + 40.0f, GetColor(0, 102, 204), TRUE);
 		DrawBoxAA(fx, fy + 20.0f, fx + 100.0f, fy + 40.0f, GetColor(0, 0, 0), FALSE);
 
 		//体力ゲージの描画
@@ -194,16 +194,16 @@ void GameMainScene::Finalize()
 	//エラーチェック
 	if (result != 0)
 	{
-		throw("Resource/dat/result_data.csvが開けません＼n");
+		throw("Resource/dat/result_data.csvが開けません\n");
 	}
 
 	//スコアを保存
-	fprintf(fp, "%d,＼n", score);
+	fprintf(fp, "%d,\n", score);
 
 	//避けた数と得点を保存
 	for (int i = 0; i < 3; i++)
 	{
-		fprintf(fp, "%d,＼n", enemy_count[i]);
+		fprintf(fp, "%d,\n", enemy_count[i]);
 	}
 
 	//ファイルクローズ

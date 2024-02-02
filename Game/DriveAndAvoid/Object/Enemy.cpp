@@ -51,7 +51,7 @@ int Enemy::GetType()  const
 //ˆÊ’uî•ñ‚ğæ“¾
 Vector2D Enemy::GetLocation() const
 {
-	return type;
+	return location;
 }
 
 //“–‚½‚è”»’è‚Ì‘å‚«‚³‚ğæ“¾

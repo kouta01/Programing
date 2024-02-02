@@ -21,7 +21,7 @@ void HelpScene::Initialize()
 	//エラーチェック
 	if (background_image == -1)
 	{
-		throw("Resource/images/Title.bmpがありません＼n");
+		throw("Resource/images/Title.bmpがありません\n");
 	}
 
 }

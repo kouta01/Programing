@@ -27,19 +27,19 @@ void SceneManager::Initialize()
 	//ウィンドウモードで起動
 	if (ChangeWindowMode(TRUE) != DX_CHANGESCREEN_OK)
 	{
-		throw("ウィンドウモードで起動できませんでした＼n");
+		throw("ウィンドウモードで起動できませんでした\n");
 	}
 
 	//DXライブラリの初期化
 	if (DxLib_Init() == -1)
 	{
-		throw("Dxライブラリが初期化できませんでした＼n");
+		throw("Dxライブラリが初期化できませんでした\n");
 	}
 
 	//描画先指定処理
 	if (SetDrawScreen(DX_SCREEN_BACK) == -1)
 	{
-		throw("描画先の指定ができませんでした＼n");
+		throw("描画先の指定ができませんでした\n");
 	}
 
 	//タイトルシーンから始める
@@ -130,7 +130,7 @@ void SceneManager::ChangeScene(eSceneType scene_type)
 	//エラーチェック
 	if (new_scene == nullptr)
 	{
-		throw("シーンが生成できませんでした。＼n");
+		throw("シーンが生成できませんでした。\n");
 	}
 
 	//前回シーンの終了時処理を行う

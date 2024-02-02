@@ -10,7 +10,7 @@ RankingData::RankingData()
 		rank[i] = NULL;
 		for (int j = 0; j < 15; j++)
 		{
-			name[i][j] = '＼0';
+			name[i][j] = '\0';
 		}
 	}
 }
@@ -32,13 +32,13 @@ void RankingData::Initialize()
 	//エラーチェック
 	if (result != 0)
 	{
-		throw("Resource/dat/ranking_data.csvが開けませんでした＼n");
+		throw("Resource/dat/ranking_data.csvが開けませんでした\n");
 	}
 
 	//対象ファイルから読み込む
 	for (int i = 0; i < 5; i++)
 	{
-		fscanf_s(fp, "%6d,%2d,%[^,],＼n", &score[i], &rank[i], name[i], 15);
+		fscanf_s(fp, "%6d,%2d,%[^,],\n", &score[i], &rank[i], name[i], 15);
 	}
 
 	//ファイルクローズ
@@ -47,7 +47,7 @@ void RankingData::Initialize()
 	//末尾データの設定
 	score[5] = 0;
 	rank[5] = 0;
-	name[5][0] = '＼0';
+	name[5][0] = '\0';
 }
 
 //終了処理
@@ -130,13 +130,13 @@ void RankingData::SortData()
 	//エラーチェック
 	if (result != 0)
 	{
-		throw("Resource/dat/ranking_data.csvが開けませんでした＼n");
+		throw("Resource/dat/ranking_data.csvが開けませんでした\n");
 	}
 
 	//対象ファイルに書き込み
 	for (int i = 0; i < 5; i++)
 	{
-		fprintf(fp, "%d,%d,%s,＼n", score[i], rank[i], name[i]);
+		fprintf(fp, "%d,%d,%s,\n", score[i], rank[i], name[i]);
 	}
 
 	//ファイルクローズ

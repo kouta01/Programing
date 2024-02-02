@@ -21,7 +21,7 @@ void RankingDispScene::Initialize()
 	//エラーチェック
 	if (background_image == -1)
 	{
-		throw("Resource/images/Ranking.bmpがありません＼n");
+		throw("Resource/images/Ranking.bmpがありません\n");
 	}
 
 	//ランキング情報を取得
