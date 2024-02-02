@@ -47,10 +47,8 @@ public:
 	}
 	const Vector2D operator * (const float& scalar)
 	{
-		float x = this->x * location.x;
-		float y = this->y * location.y;
-
-		return Vector2D(x, y);
+		float x = this->x * scalar;
+		float y = this->y * scalar;
 	}
 	const Vector2D operator / (const float& scalar)
 	{
