@@ -16,7 +16,7 @@ private:
 
 public:
 	RankingInputScene();
-	virtual Å`RankingInputScene();
+	virtual ~RankingInputScene();
 
 	virtual void Initialize() override;
 	virtual eSceneType Update() override;

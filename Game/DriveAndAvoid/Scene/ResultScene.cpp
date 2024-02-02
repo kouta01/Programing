@@ -12,7 +12,7 @@ ResultScene::ResultScene() : back_ground(NULL), score(0)
 	}
 }
 
-ResultScene::Å`ResultScene()
+ResultScene::~ResultScene()
 {
 
 }
@@ -83,7 +83,7 @@ void ResultScene::Finalize()
 	DeleteGraph(back_ground);
 	for (int i = 0; i < 3; i++)
 	{
-		DeleteGraph(enemy_image[i]);}
+		DeleteGraph(enemy_image[i]);
 	}
 }
 

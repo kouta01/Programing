@@ -8,7 +8,7 @@ cursor_image(NULL), menu_cursor(0)
 
 }
 
-TitleScene::Å`TitleScene()
+TitleScene::~TitleScene()
 {
 
 }

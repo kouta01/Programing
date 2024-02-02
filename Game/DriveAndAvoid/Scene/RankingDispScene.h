@@ -13,7 +13,7 @@ private:
 
 public:
 	RankingDispScene();
-	virtual Å`RankingDispScene();
+	virtual ~RankingDispScene();
 
 	virtual void Initialize() override;
 	virtual eSceneType Update() override;

@@ -7,7 +7,7 @@ HelpScene::HelpScene() : background_image(NULL)
 
 }
 
-HelpScene::`HelpScene()
+HelpScene::~HelpScene()
 {
 
 }
@@ -60,7 +60,7 @@ void HelpScene::Draw() const
 void HelpScene::Finalize()
 {
 	//“Ç‚İ‚ñ‚¾‰æ‘œ‚Ìíœ
-	DeletGraph(background_image);
+	DeleteGraph(background_image);
 }
 
 //Œ»İ‚ÌƒV[ƒ“î•ñ‚ğæ“¾

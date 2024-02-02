@@ -14,7 +14,7 @@ enemy(nullptr)
 	}
 }
 
-GameMainScene::～GameMainScene()
+GameMainScene::~GameMainScene()
 {
 
 }
@@ -47,7 +47,7 @@ void GameMainScene::Initialize()
 	}
 
 	//オブジェクトの生成
-	player = newPlayer;
+	player = new Player;
 	enemy = new Enemy * [10];
 
 	//オブジェクトの初期化
@@ -77,7 +77,7 @@ eSceneType GameMainScene::Update()
 			if (enemy[i] == nullptr)
 			{
 				int type = GetRand(3) % 3;
-				enemy[i] = newEnemy(type, enemy_image[type]);
+				enemy[i] = new Enemy(type, enemy_image[type]);
 				enemy[i]->Initialize();
 				break;
 			}
@@ -94,7 +94,7 @@ eSceneType GameMainScene::Update()
 			//画面外に行ったら、敵を削除してスコア加算
 			if (enemy[i]->GetLocation().y >= 640.0f)
 			{
-				enemy_count[enemy[i]]->GetType()]++;
+				enemy_count[enemy[i]->GetType()]++;
 				enemy[i]->Finalize();
 				delete enemy[i];
 				enemy[i] = nullptr;
@@ -143,8 +143,8 @@ void GameMainScene::Draw() const
 	//UIの描画
 	DrawBox(500, 0, 640, 480, GetColor(0, 153, 0), TRUE);
 	SetFontSize(16);
-	DrawFormatStrint(510, 20, GetColor(0, 0, 0), "ハイスコア");
-	DrawFormatString(560, 40, GetColor(255, 255, 255), "%08d", high_socre);
+	DrawFormatString(510, 20, GetColor(0, 0, 0), "ハイスコア");
+	DrawFormatString(560, 40, GetColor(255, 255, 255), "%08d",high_score);
 	DrawFormatString(510, 80, GetColor(0, 0, 0), "避けた数");
 	for (int i = 0; i < 3; i++)
 	{

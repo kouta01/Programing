@@ -17,7 +17,7 @@ public:
 	//ボタン入力取得処理
 	static bool GetButton(int button);     //押し続けている間
 	static bool GetButtonDown(int button)  //押した瞬間
-	static bool GetButtonUp(int button)    //離した瞬間
+	static bool GetButtonUp(int button);   //離した瞬間
 
 	//トリガー入力取得処理
 	static float GetLeftTrigger();     //左トリガー

@@ -10,7 +10,7 @@ cursor_y(0)
 	memset(name, NULL, (sizeof(char) * 15));
 }
 
-RankingInputScene::～RankingInputScene()
+RankingInputScene::~RankingInputScene()
 {
 
 }
@@ -81,7 +81,7 @@ void RankingInputScene::Draw() const
 
 	//選択用文字を描画
 	const int font_size = 25;
-	for (inti = 0; i < 26; i++)
+	for (int i = 0; i < 26; i++)
 	{
 		int x = (i % 13) * font_size + 15;
 		int y = (i / 13) * font_size + 300;
@@ -96,7 +96,7 @@ void RankingInputScene::Draw() const
 	if (cursor_y < 4)
 	{
 		int x = cursor_x * font_size + 10;
-		int y = cursor * font_size + 295;
+		int y = cursor_y * font_size + 295;
 		DrawBox(x, y, x + font_size, y + font_size, GetColor(255, 255, 255), FALSE);
 	}
 	else
@@ -113,7 +113,7 @@ void RankingInputScene::Draw() const
 }
 
 //終了時処理
-void RankingInputScene::Finalize();
+void RankingInputScene::Finalize()
 {
 	//ランキングにデータを格納
 	ranking->SetRankingData(score, name);

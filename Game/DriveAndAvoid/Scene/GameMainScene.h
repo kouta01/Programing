@@ -18,7 +18,7 @@ private:
 
 public:
 	GameMainScene();
-	virtual Å`GameMainScene();
+	virtual ~GameMainScene();
 
 	virtual void Iintialize() override;
 	virtual eSceneType Update() override;

@@ -31,7 +31,7 @@ public:
 		return *this;
 	}
 
-	const Vector2D 0perator + (const Vector2D & location)
+	const Vector2D operator + (const Vector2D & location)
 	{
 		float x = this->x + location.x;
 		float y = this->y + location.y;

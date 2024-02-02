@@ -15,7 +15,7 @@ private:
 
 public:
 	SceneManager();
-	`SceneManager();
+	~SceneManager();
 
 	void Initialize();  //‰Šú‰»ˆ—
 	void Update();      //XVˆ—

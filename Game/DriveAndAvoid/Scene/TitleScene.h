@@ -14,7 +14,7 @@ private:
 
 public:
 	TitleScene();
-	virtual Å`TitleScene();
+	virtual ~TitleScene();
 
 	virtual void Initialize() override;
 	virtual eSceneType Update() override;

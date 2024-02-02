@@ -12,14 +12,14 @@ private:
 
 public:
 	ResultScene();
-	virtual Å`ResultScene();
+	virtual ~ResultScene();
 
 	virtual void Initialize() override;
 	virtual eSceneType Update() override;
 	virtual void Draw() const override;
 	virtual void Finalize() override;
 
-	vritual eSceneType GetNowScene() const override;
+	virtual eSceneType GetNowScene() const override;
 
 private:
 	void ReadResultData();

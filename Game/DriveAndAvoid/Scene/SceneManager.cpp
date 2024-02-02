@@ -13,7 +13,7 @@ SceneManager::SceneManager() : current_scene(nullptr)
 
 }
 
-SceneManager::～SceneManager()
+SceneManager::~SceneManager()
 {
 
 }
@@ -86,7 +86,7 @@ void SceneManager::Update()
 		}
 
 		//ESCAPEキーが押されたら、ゲームを終了する
-		if (CheckHitKey(KEY_INPUT_ESCAPE) || InputControl::GetButtonUp(XINPUT_BUTTON_BACK))
+		if(CheckHitKey(KEY_INPUT_ESCAPE)||InputControl::GetButton(XINPUT_BUTTON_BACK))
 		{
 			break;
 		}
@@ -125,7 +125,7 @@ void SceneManager::Draw() const
 void SceneManager::ChangeScene(eSceneType scene_type)
 {
 	//シーンを生成する(SceneBaseが継承されているか？)
-	SceneBase* new_scene = dynamic_cast<SceneBase*>(CreatScene(scene_type));
+	SceneBase* new_scene = dynamic_cast<SceneBase*>(CreateScene(scene_type));
 
 	//エラーチェック
 	if (new_scene == nullptr)
@@ -163,7 +163,7 @@ SceneBase* SceneManager::CreateScene(eSceneType scene_type)
 		return new HelpScene;
 	case eSceneType::E_RANKING_DISP:
 		return new RankingDispScene;
-	case eSceneType::E_RANKINGINPUT:
+	case eSceneType::E_RANKING_INPUT:
 		return new RankingInputScene;
 	default:
 		return nullptr;

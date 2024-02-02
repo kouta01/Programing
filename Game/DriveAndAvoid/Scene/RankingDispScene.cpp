@@ -7,7 +7,7 @@ RankingDispScene::RankingDispScene() : background_image(NULL), ranking(nullptr)
 
 }
 
-RankingDispScene::～RankingDispScene()
+RankingDispScene::~RankingDispScene()
 {
 
 }
@@ -30,7 +30,7 @@ void RankingDispScene::Initialize()
 }
 
 //更新処理
-eSceneType RankingDispScene::Update();
+eSceneType RankingDispScene::Update()
 {
 	//Bボタンが押されたら、タイトルに戻る
 	if (InputControl::GetButtonDown(XINPUT_BUTTON_B))
@@ -58,7 +58,7 @@ void RankingDispScene::Draw() const
 void RankingDispScene::Finalize()
 {
 	//読み込んだ画像の削除
-	DeleteGraph(backgroud_image);
+	DeleteGraph(background_image);
 
 	//動的メモリの解放
 	ranking->Finalize();

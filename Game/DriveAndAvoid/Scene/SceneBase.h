@@ -17,7 +17,7 @@ class SceneBase
 {
 public:
 	SceneBase() {}
-	virtual `SceneBase {}
+	virtual ~SceneBase(){}
 
 	//‰Šú‰»ˆ—
 	virtual void Initialize() {}

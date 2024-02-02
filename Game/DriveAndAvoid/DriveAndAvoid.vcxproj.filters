@@ -74,7 +74,7 @@
     <ClInclude Include="Scene\HelpScene.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\RankingDispSceneh.h">
+    <ClInclude Include="Scene\RankingDispScene.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Scene\RankingInputScene.h">

@@ -9,7 +9,7 @@ private:
 
 public:
 	HelpScene();
-	virtual Å`HelpScene();
+	virtual ~HelpScene();
 
 	virtual void Initialize() override;
 	virtual eSceneType Update() override;
